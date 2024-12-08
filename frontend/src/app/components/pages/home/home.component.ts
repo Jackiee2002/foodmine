@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SearchComponent } from '../../partials/search/search.component';
 import { TagsComponent } from '../../partials/tags/tags.component';
+import { NotFoundComponent } from "../../partials/not-found/not-found.component";
 
 
 @Component({
@@ -13,7 +14,8 @@ import { TagsComponent } from '../../partials/tags/tags.component';
     CommonModule,
     RouterLink,
     SearchComponent,
-    TagsComponent
+    TagsComponent,
+    NotFoundComponent
 ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
