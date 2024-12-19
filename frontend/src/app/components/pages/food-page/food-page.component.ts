@@ -17,7 +17,9 @@ constructor(activatedRoute:ActivatedRoute, foodSerive:FoodService, private cartS
   , private router: Router){
   activatedRoute.params.subscribe((params) => {
     if(params.id)
-      this.food = foodSerive.getFoodById(params.id);
+     foodSerive.getFoodById(params.id).subscribe(serverFood => {
+      this.food =serverFood
+    });
   })
 }
 ngOnInit(): void{
