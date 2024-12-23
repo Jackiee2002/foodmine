@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FoodService } from '../../../services/food.service';
 import { Food } from '../../../shared/models/Food';
@@ -11,7 +11,7 @@ import { CartService } from '../../../services/cart.service';
   templateUrl: './food-page.component.html',
   styleUrl: './food-page.component.css'
 })
-export class FoodPageComponent {
+export class FoodPageComponent implements OnInit {
 food!: Food;
 constructor(activatedRoute:ActivatedRoute, foodSerive:FoodService, private cartService:CartService
   , private router: Router){

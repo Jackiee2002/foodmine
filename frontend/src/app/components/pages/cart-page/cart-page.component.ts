@@ -17,6 +17,7 @@ import { NotFoundComponent } from '../../partials/not-found/not-found.component'
             CommonModule,
           NotFoundComponent]
 })
+
 export class CartPageComponent implements OnInit {
   cart!: Cart;
   constructor(private cartService: CartService) {
